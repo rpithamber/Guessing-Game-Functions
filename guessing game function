@@ -1,0 +1,52 @@
+def guessing_game():
+    
+    
+    print("Welcome to the guessing game\nAll you need to do is guess the magic word\nEnjoy!!!\n")
+    
+    print("hint \t an act of illusions")
+    
+    word ="magic"
+    x = ""
+    
+    tries = 0
+    
+    correct = False
+
+    
+    
+    while tries <3 and not (correct):
+        if word == "magic":
+            x = input("enter you word")
+            if word.lower() == x.lower():
+                print("well done,stage 2 is loading....\n")
+                word = "rabbit"
+                
+                
+            else:
+                tries +=1
+                word == "magic"
+                print("sorry try again ,clue: illusions of the hand","you have",str(3-tries),"tries left!!!")
+                
+                
+        elif word == "rabbit":
+            print("welcome to stage 2\n i pulled a __BB__ out of a hit ?")    
+            x = input("enter you word")
+            if word.lower() == x.lower():
+                print("correct")
+                correct = True
+                
+            else:
+                tries +=1
+                word == "rabbit"
+                print("sorry try again ,clue: white animal,eats carrots","you have",str(3-tries),"tries left!!!")
+                
+            
+                
+    
+    if correct == False:
+        return print("sorry you out of tries")
+    
+    
+    else:
+        return print("yoh yoh you beat the game")
+    
